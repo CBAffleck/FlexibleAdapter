@@ -221,6 +221,8 @@ public abstract class ExpandableViewHolder extends FlexibleViewHolder {
     public void onActionStateChanged(int position, int actionState) {
         if (mAdapter.isExpanded(getFlexibleAdapterPosition())) {
             collapseView(position);
+        } else {
+            expandView(position);
         }
         super.onActionStateChanged(position, actionState);
     }
